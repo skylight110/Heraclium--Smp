@@ -1,11 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-brasil">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcard de Mitos e verdades</title>
+    <title>Heraclium SMP | Início</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes imersivas do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Special+Elite&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <!-- Atmosfera de penumbra ao fundo -->
+    <div class="overlay"></div>
+
+    <div class="container">
+        <!-- Imagem Principal da Árvore do Tempo -->
+        <div class="image-wrapper">
+            <img src="image_388837.jpg" alt="Árvore do Tempo - Heraclium SMP" class="main-tree">
+        </div>
+
+        <!-- Cabeçalho com o novo nome -->
+        <header>
+            <h1 class="glow-text">Heraclium SMP</h1>
+            <p class="tagline">O trono vazio observa em silêncio...</p>
+        </header>
+
+        <!-- Botões Principais -->
+        <div class="cta-buttons">
+            <!-- Esse botão ativa a janela de Lore via CSS -->
+            <a href="#lore-modal" class="btn main-btn">Lore Inicial</a>
+            <!-- Link do seu Discord atualizado -->
+            <a href="https://discord.gg/YVGacGy2ws" target="_blank" class="btn discord-btn">Entrar no Discord</a>
+        </div>
+    </div>
+
+    <!-- ================= JANELA DE LORE (MODAL EM PURE CSS) ================= -->
+    <div id="lore-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>A Criação e o Vazio</h2>
+            
+            <div class="lore-scroll-box">
+                <div class="poem">
+                    <p>O trono vazio observa em silêncio,</p>
+                    <p>enquanto o mundo se desfaz em guerra.</p>
+                    <p>Povos caem, cidades viram poeira,</p>
+                    <p>e as crianças choram sem entender a terra.</p>
+                </div>
+
+                <div class="poem">
+                    <p>Mas além do caos, entre estrelas distantes,</p>
+                    <p>caminham aqueles que não pertencem a lugar:</p>
+                    <p>os viajantes.</p>
+                </div>
+
+                <div class="poem">
+                    <p>Em suas mãos, não há coroas nem glória,</p>
+                    <p>apenas escolhas que moldam o amanhã.</p>
+                    <p>E no peso leve de seus passos,</p>
+                    <p>descansa o destino de tudo que ainda há.</p>
+                </div>
+
+                <hr class="separator">
+
+                <p>Em um universo recém-nascido, uma voz clama dentre o véu da criação. Um último suspiro ecoa pelos céus e pela terra; uma voz tomada por temor e agonia, serena como oração, porém banhada em sangue e lamento.</p>
+
+                <p>As almas que outrora pertenciam ao teu mundo foram arrancadas de sua morada e lançadas neste reino desconhecido. As memórias daquele que foste permanecem contigo, porém somente elas resistiram à travessia. Pois ao despertar, já não possuis o mesmo corpo, nem o mesmo nome, nem a mesma história.</p>
+
+                <p class="highlight-text">Eis-te aqui, ó Viajante.</p>
+
+                <p>Tu que andarás sobre terras destruídas e céus partidos. Tu que erguerás tua voz entre os escombros deste mundo condenado. Diante de ti estarão a ira e a misericórdia, o ódio e a paz; e será tua própria alma quem decidirá qual caminho seguirá.</p>
+
+                <p>Pois tu és a última esperança deixada sob este firmamento.</p>
+
+                <p>A derradeira lembrança que carregas é fragmentada e distante, como um sonho à beira da morte. Talvez estivesses entre os homens, em mercados e ruas comuns; talvez lutasses silenciosamente contra os tormentos da própria vida. Mas então veio o vazio.</p>
+
+                <p>Teu corpo já não te obedecia. Teus sentidos foram arrancados de ti como pó levado pelo vento. E quando fechaste os olhos pela última vez naquele mundo…</p>
+
+                <p class="highlight-text-final">Tu despertaste aqui.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= BOTÕES ESCONDIDOS (ESTILO WELCOME HOME) ================= -->
+    <div class="secret-click secret-top-left">
+        <a href="#" onclick="alert('As memórias são tudo o que restou.')">.</a>
+    </div>
+
+    <div class="secret-click secret-bottom-right">
+        <a href="#" onclick="alert('O tempo está correndo. Você consegue ouvir o tique-taque?')">👁️</a>
+    </div>
+
+    <div class="secret-text-hidden">
+        <p>O relógio marcava meia-noite quando o vazio chegou.</p>
+    </div>
+
+    <!-- Rodapé com a licença MIT -->
+    <footer>
+        <p>Heraclium SMP &copy; 2026 | Hospedado sob a Licença MIT</p>
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,292 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050811; /* Escuro profundo para destacar as cores de image_388837.jpg */
+    color: #e2e8f0;
+    font-family: 'Cinzel', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Sombra de ambiente escuro */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 35%, rgba(2, 4, 8, 0.95) 85%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Container Principal */
+.container {
+    width: 90%;
+    max-width: 650px;
+    text-align: center;
+    z-index: 3;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+/* Moldura e efeito na imagem original */
+.image-wrapper {
+    margin-bottom: 25px;
+}
+
+.main-tree {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50% 50% 15px 15px; /* Acompanha o topo arredondado da copa da árvore */
+    box-shadow: 0 0 35px rgba(230, 198, 135, 0.15); /* Brilho dourado sutil remetendo ao relógio */
+    border: 1px solid rgba(230, 198, 135, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.main-tree:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 45px rgba(230, 198, 135, 0.25);
+}
+
+/* Textos do Servidor */
+.glow-text {
+    font-size: 3rem;
+    color: #e6c687; /* Dourado místico puxado do relógio da árvore */
+    text-shadow: 0 0 20px rgba(230, 198, 135, 0.5);
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.tagline {
+    font-family: 'Special Elite', monospace;
+    font-size: 0.95rem;
+    color: #718096;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+
+/* Botões */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 14px 32px;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-btn {
+    background-color: transparent;
+    color: #e6c687;
+    border: 2px solid #e6c687;
+}
+
+.main-btn:hover {
+    background-color: #e6c687;
+    color: #050811;
+    box-shadow: 0 0 15px rgba(230, 198, 135, 0.6);
+}
+
+.discord-btn {
+    background-color: #5865F2;
+    color: #ffffff;
+    border: 2px solid #5865F2;
+}
+
+.discord-btn:hover {
+    background-color: #454fbf;
+    border-color: #454fbf;
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.5);
+}
+
+/* ================= SISTEMA DE MODAL DA LORE (PURE CSS) ================= */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 5, 10, 0.9);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    backdrop-filter: blur(8px);
+}
+
+/* Ativa o modal quando o link correspondente com id for clicado */
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: rgba(14, 20, 35, 0.95);
+    border: 1px solid rgba(230, 198, 135, 0.3);
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    padding: 35px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    text-align: left;
+}
+
+.modal-content h2 {
+    color: #e6c687;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(230, 198, 135, 0.2);
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Área de Rolagem do Texto da Lore */
+.lore-scroll-box {
+    overflow-y: auto;
+    max-height: 55vh;
+    padding-right: 15px;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+/* Customização da barra de rolagem interna */
+.lore-scroll-box::-webkit-scrollbar {
+    width: 6px;
+}
+.lore-scroll-box::-webkit-scrollbar-thumb {
+    background: rgba(230, 198, 135, 0.3);
+    border-radius: 4px;
+}
+
+/* Estilização Poética */
+.poem {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #a3b8cc;
+    text-align: center;
+}
+
+.poem p {
+    margin-bottom: 4px;
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(230, 198, 135, 0.4), transparent);
+    margin: 25px 0;
+}
+
+.lore-scroll-box p {
+    margin-bottom: 18px;
+    text-indent: 20px;
+}
+
+.highlight-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: #de6b48;
+    text-align: center;
+    text-indent: 0 !important;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.highlight-text-final {
+    font-family: 'Special Elite', monospace;
+    font-size: 1.4rem;
+    color: #e6c687;
+    text-align: center;
+    text-indent: 0 !important;
+    margin-top: 30px;
+    text-shadow: 0 0 10px rgba(230, 198, 135, 0.3);
+}
+
+/* Botão Fechar Modal */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #718096;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #de6b48;
+}
+
+/* ================= DETALHES WELCOME HOME & FOOTER ================= */
+.secret-click {
+    position: absolute;
+    z-index: 10;
+    opacity: 0.01;
+    transition: opacity 0.4s ease;
+}
+
+.secret-click a {
+    color: #de6b48;
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: help;
+}
+
+.secret-click:hover {
+    opacity: 1;
+}
+
+.secret-top-left { top: 4%; left: 4%; }
+.secret-bottom-right { bottom: 10%; right: 6%; }
+
+.secret-text-hidden {
+    position: fixed;
+    bottom: 45px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.03);
+    filter: blur(3px);
+    transition: all 0.5s ease;
+}
+
+.secret-text-hidden:hover {
+    filter: blur(0);
+    color: rgba(222, 107, 72, 0.6);
+}
+
+footer {
+    position: absolute;
+    bottom: 12px;
+    z-index: 5;
+    font-size: 0.75rem;
+    color: #4a5568;
+    letter-spacing: 1px;
+}
